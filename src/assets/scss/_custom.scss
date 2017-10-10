@@ -20,11 +20,11 @@ $bellefair: 'Bellefair', serif;
 }
 .main-content {
     background-color: $white;
-    padding: rem-calc(1);
+    padding: rem-calc(5);
     @include breakpoint(medium) {
         margin-top: rem-calc(-120);
         position: relative;
-        padding: rem-calc(50 5);
+        padding: rem-calc(50 80);
     }
 }
 .site-header {
@@ -66,7 +66,7 @@ $bellefair: 'Bellefair', serif;
                 @include xy-cell(6);
                 @include flex-align(center, middle);
                 @include breakpoint(medium) {
-                @include xy-cell(2%);
+                    @include xy-cell(25%);
                 }
 
             }
@@ -84,7 +84,7 @@ $bellefair: 'Bellefair', serif;
                 position: relative;
                 z-index: 1;
                 text-align: center;
-                @include font-bold(00);
+                @include font-bold(900);
                 @include text-transform(uppercase);
             }
         }
@@ -114,13 +114,13 @@ $bellefair: 'Bellefair', serif;
             &:before {
                 display: inline-block;
                 font-family: 'Fontawesome';
-                font-size: rem-calc(25);
+                font-size: rem-calc(30);
                 color: $white;
                 -webkit-font-smoothing: antialiased;
                 content: '\f08e';
             }
-            &[href*="facebook.com"]::before { content: '\f230'; }
-            &[href*="twitter.com"]::before { content: '\f081'; }
+            &[href*="facebook.com"]::before { content: '\f082'; }
+            &[href*="twitter.com"]::before { content: '\f099'; }
             &[href*="instagram.com"]::before { content: '\f16d'; }
             &[href*="youtube.com"]::before { content: '\f16a'; }
 
@@ -128,7 +128,6 @@ $bellefair: 'Bellefair', serif;
     }
     .title-bar {
         background-color: darken($primary-color, 10);
-        padding: 0.5em;
     }
 
     // Main Navigation for Interior pages
@@ -146,14 +145,11 @@ $bellefair: 'Bellefair', serif;
             }
             a {
                 @include text-transform(uppercase);
-                @include font-bold(350);
-                font-size: rem-calc(20);
+                @include font-bold(700);
+                font-size: rem-calc(16);
 
                 &:hover {
                     color: $secondary-color;
-                    @include breakpoint(medium) {
-                          border-bottom: 2px solid $white;
-                        }
                 }
             }
         }
@@ -189,7 +185,7 @@ $bellefair: 'Bellefair', serif;
 
     .category-icons {
         @include xy-grid();
-        margin-bottom: rem-calc(60);
+        margin-bottom: rem-calc(50);
         .icon {
             @include xy-cell();
             @include breakpoint(medium) {
@@ -198,7 +194,7 @@ $bellefair: 'Bellefair', serif;
             height: rem-calc(260);
             background-repeat: no-repeat;
             background-position: center center;
-            background-size:rem-calc(140%);
+            background-size:rem-calc(120%);
             @include flex();
             @include flex-align(center, bottom);
             &.coffee {
@@ -252,16 +248,16 @@ $bellefair: 'Bellefair', serif;
         margin:0;
         color: $white;
         text-align: center;
-        font-size:rem-calc(16);
+        font-size:rem-calc(18);
         @include padding(1, null, 1, null);
-        @include font-bold(380);
+        @include font-bold(900);
     }
 }
 
 .heading-title {
     color: $secondary-color;
     text-align: center;
-    @include font-bold(800);
+    @include font-bold(900);
     @include text-transform(uppercase);
     font-size:rem-calc(18);
     margin-bottom: rem-calc(100);
@@ -283,11 +279,7 @@ $bellefair: 'Bellefair', serif;
         margin-top:rem-calc(-15);
     }
 }
-
-
-/** Section Pages **/
-
-
+/** Internal Pages **/
 /** About Us **/
 main.page-about {
     @include xy-grid();
@@ -350,7 +342,7 @@ main.page-about {
                 color: $primary-color;
                 @include margin(1);
                 @include text-transform(uppercase);
-                @include font-bold(600);
+                @include font-bold(900);
                 &:after {
                     width: rem-calc(200);
                     height: rem-calc(2);
@@ -405,7 +397,7 @@ main.page-about {
     }
     h2 {
         color: $white;
-        @include font-bold(700);
+        @include font-bold(900);
         @include text-transform(uppercase);
         text-align: center;
         font-size: rem-calc(20);
@@ -436,7 +428,7 @@ main.page-about {
             }
             h3 {
                 @include text-transform(uppercase);
-                @include font-bold(800);
+                @include font-bold(900);
                 text-align: center;
                 margin-bottom: rem-calc(40);
             }
@@ -456,8 +448,8 @@ main.page-about {
             @include xy-cell(8);
             p.name {
                 @include text-transform(uppercase);
-                @include font-bold(800);
-                font-size:rem-calc(20);
+                @include font-bold(900);
+                font-size:rem-calc(18);
             }
             p.description {
                 color: $secondary-color;
@@ -470,9 +462,9 @@ main.page-about {
                 text-align: right;
                 font-size: rem-calc(30);
                 @include breakpoint(small only) {
-                    font-size: rem-calc(28);
+                    font-size: rem-calc(26);
                 }
-                @include font-bold(650);
+                @include font-bold(900);
             }
         }
         p {
@@ -504,16 +496,16 @@ main.page-about {
 
     label {
         color: $black;
-        font-size: rem-calc(16);
-        @include font-bold(15);
+        font-size: rem-calc(20);
+        @include font-bold();
         @include text-transform(uppercase);
     }
     input, select {
-        border-bottom: rem-calc(4) solid $primary-color;
+        border: rem-calc(5) solid $primary-color;
         height: rem-calc(50);
     }
     .send_btn {
-        @include font-bold(16);
+        @include font-bold();
         @include text-transform(uppercase);
         font-size:rem-calc(18);
         width: 100%;
@@ -581,14 +573,14 @@ main.page-about {
             @include xy-gutters();
         }
         .gallery-item {
-            margin-bottom: rem-calc(25);
+            margin-bottom: rem-calc(23);
         }
     }
 }
 .testimonials {
     background-color: $white;
-    padding-top:rem-calc(60);
-    padding-bottom: rem-calc(60);
+    padding-top:rem-calc(70);
+    padding-bottom: rem-calc(70);
     h2 {
         margin-top: 0;
     }
@@ -598,12 +590,12 @@ main.page-about {
     @include flex-align(center, middle );
     .orbit {
         background-color: $cream;
-        @include xy-cell(11);
+        @include xy-cell(10);
         border-left: rem-calc(5) solid $primary-color;
         li {
 
             div {
-                @include padding(3, 4, 2, 8);
+                @include padding(2, 4, 2, 4);
             }
         }
     }
