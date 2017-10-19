@@ -171,10 +171,13 @@ $bellefair: 'Bellefair', serif;
 .reveal-out {
     @include mui-fade(out, 1, 0);
 }
-// Index Page - About
+
+/* Index Main Page - About */
+
 .about-us-homepage {
     @include breakpoint(medium) {
         @include xy-cell(80%);
+        /* center items with offset */
         @include xy-cell-offset(10%);
     }
     p {
@@ -186,11 +189,13 @@ $bellefair: 'Bellefair', serif;
     .category-icons {
         @include xy-grid();
         margin-bottom: rem-calc(50);
+/* layout of icons */
         .icon {
             @include xy-cell();
             @include breakpoint(medium) {
                 @include xy-cell(1 of 3);
             }
+            /* style of icons */
             height: rem-calc(260);
             background-repeat: no-repeat;
             background-position: center center;
@@ -216,7 +221,7 @@ $bellefair: 'Bellefair', serif;
     }
 }
 
-// Footer
+/* Footer */
 .site-footer {
     background-color: $primary-color;
     .container {
@@ -280,6 +285,7 @@ $bellefair: 'Bellefair', serif;
     }
 }
 /** Internal Pages **/
+
 /** About Us **/
 main.page-about {
     @include xy-grid();
@@ -316,7 +322,7 @@ main.page-about {
         }
     }
 }
-/** Process */
+/** Process **/
 .page-process {
     .process-container {
         @include xy-grid();
@@ -384,7 +390,7 @@ main.page-about {
     }
 }
 
-/** Menu Section**/
+/** Menu Section **/
 .our-menu {
     background-image: url(../img/menu.jpg);
     @include padding(3, null, 3, null);
@@ -436,7 +442,7 @@ main.page-about {
     }
 }
 
-//Product list
+/* Product list */
 .product-list {
     list-style: none;
     margin: 0;
@@ -475,7 +481,7 @@ main.page-about {
 /** Gallery**/
 
 
-/** Contact Us **/
+/** Contact Us Form Section **/
 .page-contact {
     background-image:url(../img/coffee_beans.jpg);
     background-repeat: no-repeat;
@@ -523,12 +529,14 @@ main.page-about {
     @include xy-grid();
 
     .left-content {
+
         @include xy-cell(1 of 4);
         @include breakpoint(small only) {
             @include xy-cell(4 of 9);
         }
     }
     .right-content {
+
         @include xy-cell(3 of 4);
         @include breakpoint(small only) {
             @include xy-cell(5 of 9);
@@ -540,9 +548,11 @@ main.page-about {
                     @include xy-cell(4);
                     @include breakpoint(small only) {
                         @include xy-cell(6);
+
                     }
                     @include xy-gutters(30, padding, bottom);
                     &.two-cols {
+
                         @include xy-cell(8);
                         @include breakpoint(small only) {
                             @include xy-cell();
@@ -557,15 +567,18 @@ main.page-about {
     @include xy-grid();
 
     > .gallery-item {
+
         @include xy-cell(25%);
         @include xy-grid-collapse();
         @include xy-gutters(18, margin, left right);
         &.two-cols {
             @include xy-cell(50%);
             @include xy-gutters(15, padding, right);
+
         }
     }
     .right-content {
+
         @include xy-cell(25%);
         @include xy-grid-collapse();
         @include xy-gutters(25, padding, left bottom right);
@@ -573,6 +586,7 @@ main.page-about {
             @include xy-gutters();
         }
         .gallery-item {
+
             margin-bottom: rem-calc(23);
         }
     }
